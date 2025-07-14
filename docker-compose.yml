@@ -1,0 +1,10 @@
+services:
+  discord-vac-bot:
+    build: .
+    container_name: discord-vac-bot
+    volumes:
+      - ./db:/bot/db
+    environment:
+      - DISCORD_BOT_TOKEN=seu_token_aqui
+      - STEAM_API_KEY=sua_api_key_aqui
+    restart: unless-stopped
